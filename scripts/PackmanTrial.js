@@ -1,11 +1,9 @@
-/**
- * Created by Ani-lenovo on 13.11.2014 ÃÂ³..
- */
+
 window.onload = function () {
     var theCanvas = document.getElementById("the-canvas");
     var canvasCtx = theCanvas.getContext("2d");
 
-    canvasCtx.lineWidth = "2";
+    canvasCtx.lineWidth = 2;
     canvasCtx.fillStyle = "#777";
     canvasCtx.strokeStyle = "black";
 
@@ -27,8 +25,4 @@ window.onload = function () {
     canvasCtx.stroke();
     canvasCtx.fillStyle = "black";
     canvasCtx.fill();
-
-
-
-
 };
