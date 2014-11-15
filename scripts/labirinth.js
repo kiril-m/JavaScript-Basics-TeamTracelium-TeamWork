@@ -175,4 +175,4 @@ window.onload = function () {
     canvasCtx.stroke();
 
 
-}
+} // probvame gadniq github
