@@ -1,6 +1,8 @@
-/**
- * Created by Ani-lenovo on 13.11.2014 ÃÂ³..
- */
+var redMonster = new Image();
+var blueMonster = new Image();
+var ohraMonster = new Image();
+var pinkMonster = new Image();
+
 window.onload = function () {
     var theCanvas = document.getElementById("the-canvas");
     var canvasCtx = theCanvas.getContext("2d");
@@ -198,5 +200,27 @@ window.onload = function () {
                 break;
         }
     })
+
+    //===================Monsters==============
+
+    redMonster.src = 'images/redMonster1.png';
+    redMonster.onload = function () {
+        context.drawImage(redMonster , 302 , 175 , 30, 30);
+    }
+
+    blueMonster.src = 'images/blueMonster1.png';
+    blueMonster.onload = function () {
+        context.drawImage(blueMonster , 333 , 175 , 30 , 30);
+    }
+
+    ohraMonster.src = 'images/ohraMonster1.png';
+    ohraMonster.onload = function () {
+        context.drawImage(ohraMonster , 364 , 175 , 30 , 30);
+    }
+
+    pinkMonster.src = 'images/blueMonster1.png';
+    pinkMonster.onload = function () {
+        context.drawImage(pinkMonster , 395 , 175 , 30 , 30);
+    }
 
 } 
