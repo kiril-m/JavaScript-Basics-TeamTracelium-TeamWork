@@ -11,7 +11,7 @@ window.onload = function () {
 
 
   //  canvasCtx.lineJoin="round";             //styles the lines
-    canvasCtx.setLineDash([2,3]);
+    //canvasCtx.setLineDash([2,3]);
 
     canvasCtx.lineWidth = "5";
     canvasCtx.fillStyle = "#777";
@@ -174,5 +174,29 @@ window.onload = function () {
 
     canvasCtx.stroke();
 
+    //============ Ninja code ============
 
-} // probvame gadniq github
+    //var $ninja = new Image();
+    //$ninja.onload = function () {
+    //    canvasCtx.drawImage($ninja, 15, 13, 30, 35)
+    //}
+    //$ninja.src = '../images/ninja.png';
+
+
+    //============ Moving ninja ============
+
+    $(document).keydown(function (e) {
+        switch (e.which) {
+            case 37:
+                $('#ninja').css({ "transform": "scaleX(-1)", "left": "-=2px" }); //left arrow key
+                break;
+            case 38: $('#ninja').css({ "top": "-=2px" }); //up arrow key
+                break;
+            case 39: $('#ninja').css({ "transform": "scaleX(+1)", "left": "+=2px" }); //right arrow key
+                break;
+            case 40: $('#ninja').css({ "top": "+=2px" }); //bottom arrow key
+                break;
+        }
+    })
+
+} 
