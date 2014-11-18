@@ -8,13 +8,13 @@ function drawFood(posX, posY, width, height, color) {
     context.drawImage(tomato, posX, posY, width, height);
 
     //============Previous code (white squares instead of tomatos)============
-    //if (!color) {
-    //	color = "white";
-    //}
+    if (!color) {
+    	color = "white";
+    }
 
-    //context.rect(posX, posY, width, height);
-    //context.fillStyle = color;
-    //context.fill();
+    context.rect(posX, posY, width, height);
+    context.fillStyle = color;
+    context.fill();
 
     //========================================================================
 }
