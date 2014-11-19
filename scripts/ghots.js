@@ -10,7 +10,7 @@ ghost4.src = "images/ghost41.png";
 var ghosts = [ghost1, ghost2, ghost3, ghost4];
 var ghostsCoords = [];
 var ghostSize = 30;
-var ghostThinkTime = 3000;
+var ghostThinkTime = 700;
 var ghostOffset = 5;
 
 function initializeGhosts() {

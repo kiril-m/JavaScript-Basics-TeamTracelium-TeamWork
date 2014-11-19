@@ -171,4 +171,12 @@ function drawMaze() {
 	canvasCtx.stroke();
 
 	canvasCtx.beginPath();
+
+	canvasCtx.font = "16px Verdana";
+	var gradient = canvasCtx.createLinearGradient(0, 0, theCanvas.width, 0);
+	gradient.addColorStop("0", "magenta");
+	gradient.addColorStop("0.5", "blue");
+	gradient.addColorStop("1.0", "red");
+	canvasCtx.fillStyle = gradient;
+	canvasCtx.fillText("Team TRACELIUM", 300, 200);
 }
