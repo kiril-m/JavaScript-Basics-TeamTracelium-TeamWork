@@ -23,5 +23,3 @@ function gameLoop() {
 		drawGhost();
 	}, 1000 / FPS);
 }
-
-gameLoop();
