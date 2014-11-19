@@ -1,6 +1,7 @@
 var theCanvas = document.getElementById("the-canvas");
 var canvasCtx = theCanvas.getContext("2d");
 
+
 function drawMaze() {
 	theCanvas.style.left = "300px"; //aligns the canvas at the center of the screen
 	theCanvas.style.top = "150px";
@@ -170,61 +171,4 @@ function drawMaze() {
 	canvasCtx.stroke();
 
 	canvasCtx.beginPath();
-	/*
-	! REMOVE ME !
-
-var redMonster = new Image();
-var blueMonster = new Image();
-var ohraMonster = new Image();
-var pinkMonster = new Image();
-
-	//============ Ninja code ============
-
-	//var $ninja = new Image();
-	//$ninja.onload = function () {
-	//    canvasCtx.drawImage($ninja, 15, 13, 30, 35)
-	//}
-	//$ninja.src = '../images/ninja.png';
-
-
-	
-	
-    //============ Moving ninja ============
-
-    $(document).keydown(function (e) {
-        switch (e.which) {
-            case 37:
-                $('#ninja').css({ "transform": "scaleX(-1)", "left": "-=2px" }); //left arrow key
-                break;
-            case 38: $('#ninja').css({ "top": "-=2px" }); //up arrow key
-                break;
-            case 39: $('#ninja').css({ "transform": "scaleX(+1)", "left": "+=2px" }); //right arrow key
-                break;
-            case 40: $('#ninja').css({ "top": "+=2px" }); //bottom arrow key
-                break;
-        }
-    })
-
-    //===================Monsters==============
-
-    redMonster.src = 'images/redMonster1.png';
-    redMonster.onload = function () {
-        context.drawImage(redMonster , 302 , 175 , 30, 30);
-    }
-
-    blueMonster.src = 'images/blueMonster1.png';
-    blueMonster.onload = function () {
-        context.drawImage(blueMonster , 333 , 175 , 30 , 30);
-    }
-
-    ohraMonster.src = 'images/ohraMonster1.png';
-    ohraMonster.onload = function () {
-        context.drawImage(ohraMonster , 364 , 175 , 30 , 30);
-    }
-
-    pinkMonster.src = 'images/blueMonster1.png';
-    pinkMonster.onload = function () {
-        context.drawImage(pinkMonster , 395 , 175 , 30 , 30);
-    }
-*/
 }

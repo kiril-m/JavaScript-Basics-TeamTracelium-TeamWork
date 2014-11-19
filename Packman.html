@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Packman Trial</title>
-    <script src="scripts/jquery-2.1.1.min.js"></script>
-    <style>
-        #the-canvas {
-            border: 1px solid black;
-        }
-
-        body {
-            background: #777;
-        }
-
-		 #music,#backgroundMusic {
-            visibility: hidden;
-        }
-		
-        #ninja {
-            position: relative;
-            height: 30px;
-            width: 25px;
-            top: 164px;
-            left: 316px;
-			
-	
-    </style>
+	<title>Packman Trial</title>
+	<script src="scripts/jquery-2.1.1.min.js"></script>
+	<style>
+		#the-canvas {
+			border: 1px solid black;
+		}
+		body {
+			background: #777;
+		}
+		#music,
+		#backgroundMusic {
+			visibility: hidden;
+		}
+	</style>
 </head>
+
 <body>
-    <canvas id="the-canvas" width="740" height="380"></canvas>
-    <script src="scripts/labirinth.js" defer></script>
-    <script src="scripts/food.js" defer></script>
-    <script src="scripts/gameLoop.js" defer></script>
-<!--    ! REMOVE ME !-->
-    <img id="ninja" src="images/ninja.png" style="border:1px solid white" />
-	
-	
-    <audio controls id="music">
-<!--Temporary mute        <source src="sound/ninja.mp3" type="audio/mp3" id="backgroundMusic">-->
-        Your browser does not support the audio element.
-    </audio>
-	
-<!--	! REMOVE ME !-->
-	 <script>
-         document.getElementById('music').play();
+	<canvas id="the-canvas" width="740" height="380"></canvas>
+	<script src="scripts/labirinth.js" defer></script>
+	<script src="scripts/food.js" defer></script>
+	<script src="scripts/ninja.js" defer></script>
+	<script src="scripts/ghots.js" defer></script>
+	<script src="scripts/gameLoop.js" defer></script>
+
+
+	<!--
+	<audio controls id="music">
+        <source src="sound/ninja.mp3" type="audio/mp3" id="backgroundMusic">
+		Your browser does not support the audio element.
+	</audio>
+
+DELETE ME
+	<script>
+		document.getElementById('music').play();
 	</script>
-	
+-->
 </body>
+
 </html>
 

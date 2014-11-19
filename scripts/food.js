@@ -50,10 +50,15 @@ drawFood(offset + blockSize / 2 - foodWidth / 2, offset + blockSize / 2 - foodHe
 var blockSize = 40;
 var offset = 10;
 
-function block(x, y, size) {
+function block(x, y, offset, size, row, col, food) {
+	this.food = food;
+	this.row = row;
+	this.col = col;
 	this.x = x;
 	this.y = y;
+	this.offset = offset;
 	this.size = blockSize;
+	this.shouldRender = false;
 
 	this.debugDraw = function () {
 		canvasCtx.rect(this.x, this.y, this.size, this.size);
@@ -62,13 +67,20 @@ function block(x, y, size) {
 	};
 }
 
+function getBlockPosition(row, col) {
+	for (var n in allBlocks) {
+		if (allBlocks[n].row == row && allBlocks[n].col == col) {
+			return allBlocks[n];
+		}
+	}
+	return undefined;
+}
+
 // Calculate all the positions once
 for (var row = 0; row < 18; row++) {
 	for (var col = 0; col < 9; col++) {
 		var x = blockSize * row + offset + blockSize / 2 - foodWidth / 2;
 		var y = blockSize * col + offset + blockSize / 2 - foodHeight / 2;
-
-		allBlocks.push(new block(offset + blockSize * row, offset + blockSize * col, blockSize));
 
 		if ((row == 1 || row == 16) &&
 			((col >= 1 && col <= 3) || (col >= 5 && col <= 7))) {
@@ -87,6 +99,7 @@ for (var row = 0; row < 18; row++) {
 			continue;
 		} else {
 			allFood.push(new food(x, y, "white", true));
+			allBlocks.push(new block(offset + blockSize * row, offset + blockSize * col, offset, blockSize, row, col, allFood[allFood.length - 1]));
 		}
 	}
 }
@@ -96,7 +109,9 @@ function drawFood() {
 		if (allFood[i].shouldRender) {
 			allFood[i].draw();
 		}
-		
-		// Add score?
+
+		if (allBlocks[i].shouldRender) {
+			allBlocks[i].debugDraw();
+		}
 	}
 }
