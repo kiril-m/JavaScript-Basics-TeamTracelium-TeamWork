@@ -28,16 +28,19 @@
 </head>
 <body>
     <canvas id="the-canvas" width="740" height="380"></canvas>
-    <script src="scripts/labirinth.js"></script>
+    <script src="scripts/labirinth.js" defer></script>
     <script src="scripts/food.js" defer></script>
+    <script src="scripts/gameLoop.js" defer></script>
+<!--    ! REMOVE ME !-->
     <img id="ninja" src="images/ninja.png" style="border:1px solid white" />
 	
 	
     <audio controls id="music">
-        <source src="sound/ninja.mp3" type="audio/mp3" id="backgroundMusic">
+<!--Temporary mute        <source src="sound/ninja.mp3" type="audio/mp3" id="backgroundMusic">-->
         Your browser does not support the audio element.
     </audio>
 	
+<!--	! REMOVE ME !-->
 	 <script>
          document.getElementById('music').play();
 	</script>
