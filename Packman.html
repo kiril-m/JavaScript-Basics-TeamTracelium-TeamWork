@@ -12,13 +12,18 @@
             background: #777;
         }
 
+		 #music,#backgroundMusic {
+            visibility: hidden;
+        }
+		
         #ninja {
             position: relative;
             height: 30px;
             width: 25px;
             top: 164px;
             left: 316px;
-        }
+			
+	
     </style>
 </head>
 <body>
@@ -26,6 +31,17 @@
     <script src="scripts/labirinth.js"></script>
     <script src="scripts/food.js" defer></script>
     <img id="ninja" src="images/ninja.png" style="border:1px solid white" />
+	
+	
+    <audio controls id="music">
+        <source src="sound/ninja.mp3" type="audio/mp3" id="backgroundMusic">
+        Your browser does not support the audio element.
+    </audio>
+	
+	 <script>
+         document.getElementById('music').play();
+	</script>
+	
 </body>
 </html>
 
