@@ -95,7 +95,7 @@ function handleInput(e) {
 function checkDeath() {
 	for (var n in ghostsCoords) {
 		if (ghostsCoords[n][0] == getBlockPosition(ninjaRow, ninjaCol)) {
-			console.log("You have died.");
+			endScreen()
 		}
 	}
 }
