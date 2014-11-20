@@ -95,7 +95,9 @@ function handleInput(e) {
 function checkDeath() {
 	for (var n in ghostsCoords) {
 		if (ghostsCoords[n][0] == getBlockPosition(ninjaRow, ninjaCol)) {
-			endScreen()
+		    alert("You lost this battle!\n\nSorry, brave ninja - this time the ghosts were better than you!\n\n" + "Your score is: " + score + " points.\n\nBetter luck next time! :)")
+		    score = 0;
+		    //endScreen()
 		}
 	}
 }
