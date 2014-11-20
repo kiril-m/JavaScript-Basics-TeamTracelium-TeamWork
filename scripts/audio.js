@@ -7,9 +7,9 @@ $(document).ready(function () {
         if (e.keyCode == 77) {
             console.log(audio.volume);
             if (audio.volume == 0.0) { //mute button
-                audio.volume = 0.5;
+                audio.volume += 0.5;
             }
-            else  if (audio.volume > 0.0 && audio.volume <= 1.0){
+            else  if (audio.volume > 0.0 || audio.volume <= 1.0){
                 audio.volume = 0.0;
             }
         }
